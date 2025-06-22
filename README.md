@@ -79,6 +79,4 @@ Contributions are welcome! Feel free to submit bug reports, feature requests, or
 
 ---
 
-## 📄 License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more information.
+Yunus ACAR / mrlaikatak

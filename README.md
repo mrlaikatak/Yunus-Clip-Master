@@ -8,12 +8,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-*(Buraya uygulamanın ekran görüntüleri eklenecek)*
-
----
-
 ## ✨ Key Features
 
 - **📋 Automatic Clipboard Monitoring**: Seamlessly captures every piece of text you copy.
@@ -70,15 +64,6 @@ The application is built on a modern SwiftUI architecture:
 2.  Copy any text from any application (`Cmd + C`).
 3.  The copied text will instantly appear at the top of the list in the Clip Master window.
 4.  To reuse a previous item, simply click its row in the list. The text will be copied back to your clipboard.
-
----
-
-## 🚀 Roadmap
-
-- Search bar to filter clipboard history.
-- Ability to favorite frequently used clips.
-- Option to clear clipboard history.
-- Quick access via a menu bar (status bar) icon.
 
 ---
 

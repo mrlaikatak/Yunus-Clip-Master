@@ -4,7 +4,7 @@
 ![macos-version](https://img.shields.io/badge/macOS-12.0%2B-blue.svg)
 ![license](https://img.shields.io/badge/license-MIT-green.svg)
 
-**Clip Master**, Swift ve SwiftUI kullanılarak geliştirilmiş, macOS için modern ve hafif bir pano yöneticisidir. Kopyaladığınız metinleri otomatik olarak yakalar, yerel olarak saklar ve bu geçmişe temiz, sezgisel bir arayüzle anında erişim sağlar. Amacı, pano geçmişinizi yönetmeyi kolaylaştırarak günlük iş akışınızı hızlandırmaktır.
+**Clip Master** is a modern, lightweight clipboard manager for macOS, built with Swift and SwiftUI. It automatically captures text you copy, stores it locally, and provides instant access to your clipboard history through a clean, intuitive interface. Its purpose is to streamline your workflow by making your clipboard history easily accessible.
 
 ---
 
@@ -16,84 +16,84 @@
 
 ## ✨ Key Features
 
-- **📋 Otomatik Pano Takibi**: Kopyaladığınız her metin anında ve otomatik olarak kaydedilir.
-- **💾 Kalıcı Depolama**: Core Data sayesinde pano geçmişiniz cihazınızda güvenle saklanır ve uygulama yeniden başlatıldığında bile kaybolmaz.
-- **🚀 Native & Hızlı Arayüz**: SwiftUI ile geliştirildiği için macOS ile tam uyumlu, akıcı ve modern bir kullanıcı deneyimi sunar.
-- **🖱️ Tek Tıkla Kopyalama**: Geçmişteki herhangi bir öğeye tıklayarak anında tekrar panonuza kopyalayabilirsiniz.
-- **🔒 Gizlilik Odaklı**: Tüm verileriniz yalnızca cihazınızda tutulur. Hiçbir veri buluta veya harici bir sunucuya gönderilmez.
-- **🧹 Temiz ve Minimal Tasarım**: Sadece ihtiyacınız olan özellikleri sunar, gereksiz karmaşadan uzaktır.
+- **📋 Automatic Clipboard Monitoring**: Seamlessly captures every piece of text you copy.
+- **💾 Persistent Storage**: Uses Core Data to securely store your clipboard history on your device, ensuring no data is lost even after a restart.
+- **🚀 Native & Responsive UI**: Built with SwiftUI for a fluid, modern, and native macOS experience.
+- **🖱️ One-Click Copy**: Instantly copy any previous item back to your clipboard by simply clicking on it.
+- **🔒 Privacy-First**: All your data is stored locally on your machine. No information is ever sent to the cloud or any external servers.
+- **🧹 Clean & Minimal Design**: Focuses on essential features without unnecessary clutter.
 
 ---
 
 ## 🛠️ Technology Stack & Architecture
 
-- **Dil**: Swift
-- **Arayüz**: SwiftUI
-- **Veri Saklama**: Core Data
+- **Language**: Swift
+- **UI Framework**: SwiftUI
+- **Database**: Core Data
 - **Platform**: macOS
 
-Uygulama, modern bir SwiftUI mimarisi üzerine kurulmuştur:
-- **`Clip_MasterApp.swift`**: SwiftUI App yaşam döngüsünü kullanan ana uygulama giriş noktası.
-- **`ContentView.swift`**: Pano geçmişini listeleyen ana arayüz. Core Data'dan gelen verileri `@FetchRequest` ile gerçek zamanlı olarak gösterir.
-- **`ClipboardManager.swift`**: Sistemin panosunu (`NSPasteboard`) dinleyerek yeni kopyalanan metinleri yakalayan ve Core Data'ya kaydeden yönetici sınıf.
-- **`ClipItem`**: Core Data modelindeki tek bir pano kaydını temsil eden `NSManagedObject` sınıfı.
+The application is built on a modern SwiftUI architecture:
+- **`Clip_MasterApp.swift`**: The main entry point using the SwiftUI App lifecycle.
+- **`ContentView.swift`**: The main view that lists the clipboard history. It uses `@FetchRequest` to display data from Core Data in real-time.
+- **`ClipboardManager.swift`**: A manager class that observes the system's `NSPasteboard`, captures new text entries, and saves them to Core Data.
+- **`ClipItem`**: The `NSManagedObject` subclass representing a single clipboard entry in the Core Data model.
 
 ---
 
 ## ⚙️ Requirements & Installation
 
-**Gereksinimler:**
-- macOS 12.0 veya üstü
-- Xcode 14.0 veya üstü (Geliştirme için)
+**Requirements:**
+- macOS 12.0 or later
+- Xcode 14.0 or later (for development)
 
-**Kurulum (Kaynak Koddan):**
-1.  **Repository'yi klonlayın:**
+**Building from Source:**
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/mrlaikatak/Yunus-Clip-Master.git
     ```
-2.  **Proje klasörüne gidin:**
+2.  **Navigate to the project directory:**
     ```bash
     cd Yunus-Clip-Master/"Clip Master"
     ```
-3.  **Projeyi Xcode'da açın:**
+3.  **Open the project in Xcode:**
     ```bash
     open "Clip Master.xcodeproj"
     ```
-4.  **Derleyin ve Çalıştırın:**
-    Xcode'da `Cmd + R` tuşlarına basarak uygulamayı çalıştırın.
+4.  **Build and Run:**
+    Press `Cmd + R` in Xcode to build and run the application.
 
 ---
 
 ## 📖 How to Use
 
-1.  Uygulamayı başlatın. Ana pencere ekranda görünecektir.
-2.  Herhangi bir uygulamada bir metin kopyalayın (`Cmd + C`).
-3.  Kopyaladığınız metnin anında Clip Master penceresindeki listenin en üstünde belirdiğini göreceksiniz.
-4.  Geçmişteki bir öğeyi tekrar kullanmak için listedeki satırına tıklamanız yeterlidir. Metin anında tekrar panonuza kopyalanacaktır.
+1.  Launch the application. The main window will appear.
+2.  Copy any text from any application (`Cmd + C`).
+3.  The copied text will instantly appear at the top of the list in the Clip Master window.
+4.  To reuse a previous item, simply click its row in the list. The text will be copied back to your clipboard.
 
 ---
 
-## 🚀 Future Ideas
+## 🚀 Roadmap
 
-- Arama çubuğu ekleyerek pano geçmişinde arama yapma
-- Sık kullanılan öğeleri favorilere ekleme
-- Pano geçmişini temizleme seçeneği
-- Menü çubuğu (Status Bar) ikonu üzerinden hızlı erişim
+- Search bar to filter clipboard history.
+- Ability to favorite frequently used clips.
+- Option to clear clipboard history.
+- Quick access via a menu bar (status bar) icon.
 
 ---
 
 ## 🤝 Contributing
 
-Bu projeye katkıda bulunmaktan çekinmeyin! Hata bildirimleri, özellik talepleri veya doğrudan kod katkıları (Pull Request) memnuniyetle karşılanır.
+Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
 
-1.  Projeyi Fork'layın.
-2.  Yeni bir Feature Branch'i oluşturun (`git checkout -b feature/AmazingFeature`).
-3.  Değişikliklerinizi Commit'leyin (`git commit -m 'Add some AmazingFeature'`).
-4.  Branch'inizi Push'layın (`git push origin feature/AmazingFeature`).
-5.  Bir Pull Request açın.
+1.  Fork the project.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-Bu proje MIT Lisansı altında dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasına göz atın.
+This project is distributed under the MIT License. See the `LICENSE` file for more information.

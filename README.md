@@ -1,7 +1,6 @@
 # Clip Master: A Modern Clipboard Manager for macOS
 
 ![swift-version](https://img.shields.io/badge/swift-5.7-orange.svg)
-![macos-version](https://img.shields.io/badge/macOS-12.0%2B-blue.svg)
 
 **Clip Master** is a modern, lightweight clipboard manager for macOS, built with Swift and SwiftUI. It automatically captures text you copy, stores it locally, and provides instant access to your clipboard history through a clean, intuitive interface. Its purpose is to streamline your workflow by making your clipboard history easily accessible.
 

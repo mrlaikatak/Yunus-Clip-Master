@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22618" systemVersion="24A5264n" minimumToolsVersion="11.0">
+    <entity name="ClipItem" representedClassName="ClipItem" syncable="YES">
+        <attribute name="id" attributeType="UUID"/>
+        <attribute name="content" attributeType="String"/>
+        <attribute name="timestamp" attributeType="Date"/>
+        <attribute name="isStarred" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="contentType" attributeType="String"/>
+        <attribute name="characterCount" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+</model> 
